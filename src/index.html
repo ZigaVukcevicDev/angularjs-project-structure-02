@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- build:css css/style.css -->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="demo">
+        <div class="container" ng-controller="DemoController">
+            <h1>Spletni obrazec d.o.o.</h1>
+
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="inputText" />
+                <p demo-directive-counter input-text="{{ inputText.length }}">{{ inputText.length }}</p>
+            </div>
+            <div demo-directive-newsletter></div>
+            <div demo-directive-months></div>
+        </div>
+        <!-- build:js js/all.js -->
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="components/obrazec/demoController.js"></script>
+        <script src="components/obrazec/demoDirectiveCounter.js"></script>
+        <script src="components/obrazec/demoDirectiveNewsletter.js"></script>
+        <script src="components/obrazec/demoDirectiveMonths.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
